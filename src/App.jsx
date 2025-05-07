@@ -1,37 +1,24 @@
 import './App.css';
-import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import HomePage from './pages/HomePage';
-import AddExercisePage from './pages/AddExercisePage';
-import EditExercisePage from './pages/EditExercisePage';
+import OrderPage from './pages/OrderPage';
+import RegistrationPage from './pages/RegistrationPage';
+import items from './data/items';
 
 function App() {
-
-  const [exerciseToEdit, setExerciseToEdit] = useState();
-
   return (
-    <div className="app">
-
-      
-
-      <Router>
-        <header>
-          <h1>Exercise Tracker</h1>
-          <p>Keep track of your exercise and workouts using this web app!</p>
-        </header>
-        <Navigation />
+    <div>
+    <Router>
+      <Navigation />
         <Routes>
-          <Route path="/" element={<HomePage setExerciseToEdit={setExerciseToEdit}/>}></Route>
-          <Route path="/add-exercise" element={ <AddExercisePage />}></Route>
-          <Route path="/edit-exercise" element={ <EditExercisePage exerciseToEdit={exerciseToEdit}/>}></Route>
+          <Route path="/" element={<HomePage />}></Route>
+          <Route path="/order" element={ <OrderPage items={items}/>}></Route>
+          <Route path="/register" element={ <RegistrationPage />}></Route>
         </Routes>
-      </Router>
-
-      <footer>© 2024 Jeremy Shinn</footer>
-
+    </Router>
     </div>
-  );
+  )
 }
 
 export default App;

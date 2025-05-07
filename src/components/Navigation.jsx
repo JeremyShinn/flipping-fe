@@ -2,14 +2,19 @@ import { Link } from 'react-router-dom';
 
 function Navigation() {
     return (
-        <>
+        <header>
             <nav className="App-nav">
-                <div>
+            <p>
                 <Link to="/">Home</Link>
-                </div>
-                <Link to="/add-exercise">New Workout</Link>
-            </nav>
-        </>
+            </p>
+            <p>
+                <Link to="/order">Online Orders</Link>
+            </p>
+            <p>
+                <Link to="/register">Register</Link>
+            </p>
+        </nav>
+        </header>
     );
 }
 
