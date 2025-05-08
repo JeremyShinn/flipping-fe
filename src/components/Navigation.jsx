@@ -6,11 +6,11 @@ function Navigation() {
             <nav className="App-nav">
                 <p>
                     <Link to="/">Home</Link>
-                    
                 </p>
                 <p>
                     <Link to="/finances">Finances</Link>
                 </p>
+                
             </nav>
         </header>
     );
