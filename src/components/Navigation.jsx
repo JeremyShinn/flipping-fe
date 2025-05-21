@@ -5,7 +5,7 @@ function Navigation() {
         <header>
             <nav className="App-nav">
                 <p>
-                    <Link to="/">Home</Link>
+                    <Link to="/">Inventory</Link>
                 </p>
                 <p>
                     <Link to="/finances">Finances</Link>
